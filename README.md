@@ -1,1 +1,218 @@
-# index.html
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vabilo: Uroš 50 let — Abraham</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Plus Jakarta Sans',sans-serif;background:#0d0f12;color:#f3f4f6;min-height:100vh;padding:20px 16px 50px;-webkit-font-smoothing:antialiased}
+.wrap{max-width:600px;margin:0 auto}
+
+.badge-top{text-align:center;font-size:11px;letter-spacing:4px;color:#d4af37;text-transform:uppercase;margin-bottom:25px;font-weight:600;opacity:0.9}
+
+.header{text-align:center;background:linear-gradient(145deg, #161922, #101218);border:1px solid rgba(212,175,55,0.25);border-radius:24px;padding:35px 20px;box-shadow:0 15px 35px rgba(0,0,0,0.5);position:relative;overflow:hidden}
+.header::after{content:'';position:absolute;top:0;left:0;width:100%;height:3px;background:linear-gradient(90deg, transparent, #d4af37, transparent)}
+
+.age{font-family:'Playfair Display',serif;font-size:90px;font-weight:800;line-height:1;background:linear-gradient(180deg,#fff 0%,#e8d9a0 50%,#b89728 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:5px}
+.name{font-family:'Playfair Display',serif;font-size:28px;letter-spacing:3px;color:#fff;margin-top:10px;font-weight:600}
+.abraham-title{font-size:14px;letter-spacing:5px;color:#d4af37;text-transform:uppercase;margin-top:6px;font-weight:600}
+.subtitle{color:#9ca3af;font-size:15px;line-height:1.6;margin-top:18px;font-style:italic}
+
+.card{background:#161922;border:1px solid rgba(255,255,255,0.07);border-radius:20px;padding:24px;margin:20px 0;box-shadow:0 8px 25px rgba(0,0,0,0.3)}
+.card h2{font-family:'Playfair Display',serif;color:#d4af37;font-size:16px;letter-spacing:2px;margin-bottom:18px;text-transform:uppercase;border-bottom:1px solid rgba(212,175,55,0.15);padding-bottom:10px}
+
+.info-row{display:flex;gap:15px;align-items:flex-start;margin-bottom:16px}
+.info-row:last-child{margin-bottom:0}
+.icon{font-size:22px;min-width:30px;text-align:center}
+.info-row b{font-size:15px;color:#fff;display:block}
+.info-row p{color:#9ca3af;font-size:14px;margin-top:3px;line-height:1.5}
+
+.timeline-row{display:flex;gap:15px;padding:14px 0;border-bottom:1px dashed rgba(255,255,255,0.08)}
+.timeline-row:last-child{border-bottom:none}
+.time{font-weight:700;color:#d4af37;font-size:14px;min-width:55px}
+.timeline-row b{font-size:15px;color:#fff;display:block}
+.timeline-row p{color:#9ca3af;font-size:13px;margin-top:2px;line-height:1.4}
+
+.nokids{background:linear-gradient(135deg, rgba(184,61,61,0.15), rgba(20,12,12,0.4));border:1px solid rgba(184,61,61,0.3);border-radius:16px;padding:18px;text-align:center;margin:20px 0}
+.nokids b{color:#f87171;font-size:14px;letter-spacing:0.5px}
+.nokids p{color:#d1d5db;font-size:13px;margin-top:5px;line-height:1.5}
+
+label{font-size:12px;color:#d4af37;display:block;margin-top:14px;margin-bottom:6px;text-transform:uppercase;letter-spacing:1px;font-weight:600}
+input,select,textarea{width:100%;padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:#0f1117;color:#fff;font-size:15px;font-family:'Plus Jakarta Sans',sans-serif;outline:none;transition:all 0.3s}
+input:focus,select:focus,textarea:focus{border-color:#d4af37;box-shadow:0 0 10px rgba(212,175,55,0.2)}
+
+.choice{display:flex;gap:10px;margin-top:6px}
+.choice button{flex:1;padding:13px;border-radius:12px;border:1px solid rgba(255,255,255,0.1);background:#0f1117;color:#9ca3af;font-weight:600;font-size:14px;cursor:pointer;transition:all 0.2s}
+.choice button.active{background:#d4af37;color:#000;border-color:#d4af37;font-weight:700;box-shadow:0 0 15px rgba(212,175,55,0.3)}
+
+.btn-group{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:15px;border-radius:12px;font-weight:700;font-size:14px;text-decoration:none;cursor:pointer;border:none;letter-spacing:0.5px;transition:transform 0.1s}
+.btn:active{transform:scale(0.98)}
+.btn-wa{background:#25D366;color:#000}
+.btn-sms{background:#1f2937;color:#fff;border:1px solid rgba(255,255,255,0.15)}
+.btn-mail{background:transparent;color:#d4af37;border:1px solid #d4af37}
+.btn-map{background:linear-gradient(135deg, #d4af37, #b89728);color:#000;margin-top:14px;box-shadow:0 4px 15px rgba(212,175,55,0.25)}
+
+.footer{text-align:center;color:#6b7280;font-size:12px;margin-top:35px;line-height:1.8}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="badge-top">✦ VABILO NA ABRAHAMA ✦</div>
+
+<div class="header">
+    <div class="age">50</div>
+    <div class="abraham-title">Abraham trka na vrata</div>
+    <div class="name">UROŠ GOLOB</div>
+    <p class="subtitle">»Petdeset let izkušenj, smeha in lepih spominov.<br>Čas je, da to zbranost pošteno proslavimo v dobri družbi!«</p>
+</div>
+
+<div class="card">
+    <h2>📅 Kdaj & Kje</h2>
+    <div class="info-row">
+        <span class="icon">📅</span>
+        <div>
+            <b>Sobota, 23. 1. 2027 ob 18:00</b>
+            <p>Pravi rojstni dan je sicer 24. januarja, a z zabavo začnemo dan prej!</p>
+        </div>
+    </div>
+    <div class="info-row" style="margin-top:16px;">
+        <span class="icon">📍</span>
+        <div>
+            <b>Gostilna in pizzerija Strahinc</b>
+            <p>Zgornje Bitnje 32, 4209 Žabnica</p>
+        </div>
+    </div>
+    <a class="btn btn-map" href="https://www.google.com/maps/search/?api=1&query=Gostilna+in+pizzerija+Strahinc+Zgornje+Bitnje+32+4209+%C5%BDabnica" target="_blank">🗺️ ODPIRI GOOGLE MAPS NAVIGACIJO</a>
+</div>
+
+<div class="card">
+    <h2>✨ Program večera</h2>
+    <div class="timeline-row">
+        <div class="time">18:00</div>
+        <div>
+            <b>Zbiranje posadke &amp; Ogrevanje motorjev</b>
+            <p>Priklop gostov na omrežje, prvi pozdravi in preverjanje, ali imajo vsi napolnjene baterije.</p>
+        </div>
+    </div>
+    <div class="timeline-row">
+        <div class="time">18:30</div>
+        <div>
+            <b>Nafilajmo tanke! (Glavna gozba &amp; Pijača)</b>
+            <p>Vnos goriva visoke oktanske vrednosti, bogata miza in prve zdravljice za boljše mazanje grla.</p>
+        </div>
+    </div>
+    <div class="timeline-row">
+        <div class="time">20:30</div>
+        <div>
+            <b>Kalorični udar (Abrahamova torta)</b>
+            <p>Sladko presenečenje, pihanje svečk brez aktiviranja požarnih alarmov in osrednji del večera.</p>
+        </div>
+    </div>
+    <div class="timeline-row">
+        <div class="time">22:00+</div>
+        <div>
+            <b>Overclocking &amp; Zamenjava olja</b>
+            <p>Ples, sproščeno druženje in zabava brez varnostnih omejitev vse do jutranjih ur!</p>
+        </div>
+    </div>
+</div>
+
+<div class="nokids">
+    <b>🚫 DOGODEK BREZ OTROK (ADULTS ONLY)</b>
+    <p>Da se bodo vsi odrasli lahko sprostili in brezskrbno poveselili, bo ta večer namenjen izključno družbi odraslih.</p>
+</div>
+
+<div class="card">
+    <h2>👔 Dress Code</h2>
+    <p style="color:#d1d5db; font-size:14px; line-height:1.6;">Smart Casual (sproščeno elegantno). Najpomembnejša oprema pa so dobra volja, nasmeh in naspana leta za nepozaben večer!</p>
+</div>
+
+<div class="card">
+    <h2>✅ Potrditev prihoda (RSVP)</h2>
+    
+    <label>Tvoje ime in priimek</label>
+    <input id="ime" placeholder="npr. Janez Novak">
+
+    <label>Ali se nam pridružiš?</label>
+    <div class="choice">
+        <button type="button" class="active" onclick="setChoice(this,'DA')">SEVEDA, PRIDEM ✅</button>
+        <button type="button" onclick="setChoice(this,'MOGOČE')">MOGOČE 🤔</button>
+        <button type="button" onclick="setChoice(this,'NE')">ŽAL NE MOREM ❌</button>
+    </div>
+
+    <label>Število oseb</label>
+    <select id="osebe">
+        <option value="1">1 oseba</option>
+        <option value="2">2 osebi</option>
+        <option value="3">3 osebe</option>
+        <option value="4">4 osebe</option>
+    </select>
+
+    <label>Sporočilo za slavljenca</label>
+    <textarea id="msg" rows="2" placeholder="Napiši kakšno lepo misel ali željo..."></textarea>
+
+    <div class="btn-group">
+        <button class="btn btn-wa" onclick="sendWA()">💬 POŠLJI PREKO WHATSAPP</button>
+        <button class="btn btn-sms" onclick="sendSMS()">📱 POŠLJI PREKO SMS</button>
+        <button class="btn btn-mail" onclick="sendMail()">✉️ POŠLJI PREKO E-MAILA</button>
+    </div>
+</div>
+
+<div class="footer">
+    Se že veselim tvoje družbe!<br>
+    <b>Uroš Golob</b> // Abraham 50 let
+</div>
+
+</div>
+
+<script>
+let choice = 'DA';
+
+function setChoice(btn, val) {
+    choice = val;
+    document.querySelectorAll('.choice button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+}
+
+function getData() {
+    const imeInput = document.getElementById('ime');
+    const ime = imeInput.value.trim();
+    if (!ime) {
+        alert('Prosim, vpiši svoje ime in priimek.');
+        imeInput.focus();
+        return null;
+    }
+    const osebe = document.getElementById('osebe').value;
+    const msg = document.getElementById('msg').value.trim();
+    
+    let text = `Živjo Uroš! ${ime} potrjuje prihod na Abrahama (50 let): ${choice} (št. oseb: ${osebe}).`;
+    if (msg) text += ` Sporočilo: ${msg}`;
+    text += ` [Gostilna Strahinc, 23.1.2027 ob 18:00]`;
+    
+    return { ime, text };
+}
+
+function sendWA() {
+    const data = getData();
+    if (!data) return;
+    window.open(`https://wa.me/38641719442?text=${encodeURIComponent(data.text)}`, '_blank');
+}
+
+function sendSMS() {
+    const data = getData();
+    if (!data) return;
+    window.location.href = `sms:+38641719442?body=${encodeURIComponent(data.text)}`;
+}
+
+function sendMail() {
+    const data = getData();
+    if (!data) return;
+    window.location.href = `mailto:golobinho@gmail.com?subject=${encodeURIComponent('Potrditev prihoda - Uroš Abraham 50 let')}&body=${encodeURIComponent(data.text)}`;
+}
+</script>
+</body>
+</html>
